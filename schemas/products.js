@@ -1,7 +1,7 @@
 import {defineField, defineType} from 'sanity'
 
 export default defineType({
-  name: 'products',
+  name: 'product',
   title: 'Products',
   type: 'document',
   fields: [
@@ -15,7 +15,7 @@ export default defineType({
       title: 'Slug',
       type: 'slug',
       options: {
-        source: 'title',
+        source: 'name',
         maxLength: 96,
       },
     }),
@@ -43,11 +43,6 @@ export default defineType({
       title: 'Currency',
       description: "Keep this 'usd' for the purposes of this tutorial",
       type: 'string',
-    }),
-    defineField({
-      name: 'body',
-      title: 'Body',
-      type: 'blockContent',
     }),
   ],
 
